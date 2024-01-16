@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <Head>
-      <img src="/assets/Logo.png" alt="Logo" />
+      <Link to={"/"}>
+        <img src="/assets/Logo.png" alt="Logo" />
+      </Link>
 
       <Button>შესვლა</Button>
     </Head>

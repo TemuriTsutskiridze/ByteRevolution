@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import blogData from "../../BlogData.json";
+import blogData from "../../blogData.json";
 import { Link } from "react-router-dom";
 
 export default function BlogItem() {
@@ -26,11 +26,12 @@ export default function BlogItem() {
                 ))}
               </Categories>
               <Description>{item.description}</Description>
-
-              <ItselfLink>
-                <p>სრულად ნახვა</p>
-                <img src="/assets/Arrow.svg" />
-              </ItselfLink>
+              <Link to={`/${item.id}`}>
+                <ItselfLink>
+                  <p>სრულად ნახვა</p>
+                  <img src="/assets/Arrow.svg" />
+                </ItselfLink>
+              </Link>
             </Blog>
           );
         })}
