@@ -19,13 +19,13 @@ export default function BlogItem() {
                     key={category.name}
                     name={category.name}
                     color={category.color}
-                    bgColor={category.bgColor}
+                    bgcolor={category.bgColor}
                   >
                     {category.name}
                   </ListItem>
                 ))}
               </Categories>
-              <Description>{item.description}</Description>
+              <Description>{`${item.description.slice(0, 86)}...`}</Description>
               <Link to={`/${item.id}`}>
                 <ItselfLink>
                   <p>სრულად ნახვა</p>
@@ -84,13 +84,13 @@ const Categories = styled.ul`
   margin-top: 1.6rem;
 `;
 
-const ListItem = styled.li<{ name: string; color: string; bgColor: string }>`
+const ListItem = styled.li<{ name: string; color: string; bgcolor: string }>`
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;
   padding: 0.8rem 1.6rem;
   border-radius: 30px;
-  background-color: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgcolor};
   color: ${(props) => props.color};
 `;
 
