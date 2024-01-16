@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import CategoryList from "../components/Home/CategoryList";
+import BlogItem from "../components/Home/BlogItem";
 
 export default function Home() {
   return (
@@ -7,6 +9,8 @@ export default function Home() {
         <h1>ბლოგი</h1>
         <img src="/assets/Blog.png" alt="Blog" />
       </Title>
+      <CategoryList />
+      <BlogItem />
     </Main>
   );
 }
