@@ -8,13 +8,13 @@ export default function BlogItem() {
       <BlogContainer>
         {blogData.map((item) => {
           return (
-            <Blog>
+            <Blog key={item.id}>
               <img src={item.image} alt="image" />
-              <Name>{item.name}</Name>
-              <Date>{item.date}</Date>
+              <Name>{item.author}</Name>
+              <Date>{item.publish_date}</Date>
               <Title>{item.title}</Title>
               <Categories>
-                {item.category.map((category) => (
+                {item.categories.map((category) => (
                   <ListItem
                     key={category.name}
                     name={category.name}

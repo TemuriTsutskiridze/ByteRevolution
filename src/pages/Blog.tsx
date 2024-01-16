@@ -3,10 +3,11 @@ import blogData from "../blogData.json";
 import styled from "styled-components";
 
 export default function Blog() {
-  const { blog } = useParams<string>();
-  const currentBlog = blogData.find((item) => item.id === blog);
+  const { blog } = useParams();
+  const blogId = blog ? parseInt(blog, 10) : undefined;
+  const currentBlog = blogData.find((item: TBlog) => item.id === blogId);
 
-  return <Title>{currentBlog?.name}</Title>;
+  return <Title>{currentBlog?.author}</Title>;
 }
 
 const Title = styled.div``;
