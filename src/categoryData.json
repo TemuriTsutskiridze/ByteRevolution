@@ -1,0 +1,32 @@
+[
+  {
+    "name": "მარკეტი",
+    "color": "#D6961C",
+    "bgColor": "#FFB82F14"
+  },
+  {
+    "name": "აპლიკაცია",
+    "color": "#15C972",
+    "bgColor": "#1CD67D14"
+  },
+  {
+    "name": "ხელოვნური ინტელექტი",
+    "color": "#B71FDD",
+    "bgColor": "#EEE1F7"
+  },
+  {
+    "name": "UI/UX",
+    "color": "#DC2828",
+    "bgColor": "#FA575714"
+  },
+  {
+    "name": "კვლევა",
+    "color": "#60BE16",
+    "bgColor": "#E9EFE9"
+  },
+  {
+    "name": "Figma",
+    "color": "#1AC7A8",
+    "bgColor": "#08D2AE14"
+  }
+]
