@@ -1,6 +1,16 @@
 import img from "/public/folder-add.png";
 import styled from "styled-components";
 
+// interface MySchemaTypes {
+//   image: File | null;
+//   author: string;
+//   title: string;
+//   description: string;
+//   date: Date;
+//   categories: string;
+//   email: string;
+// }
+
 export default function AddBlog() {
   return (
     <Container>
