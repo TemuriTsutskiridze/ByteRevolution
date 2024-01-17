@@ -17,8 +17,8 @@ export default function AddBlog() {
               </p>
             </div>
           </div>
-          <div>
-            <section className="author&title">
+          <div className="sections">
+            <section className="author-title">
               <div className="author">
                 <h3>ავტორი *</h3>
                 <input type="text" placeholder="შეიყვანეთ ავტორი" />
@@ -43,7 +43,7 @@ export default function AddBlog() {
                 <li>მინიმუმ 2 სიმბოლო </li>
               </ul>
             </section>
-            <section className="date&category&mail">
+            <section className="date-category-mail">
               <div className="date">
                 <h3>გამოქვეყნების თარიღი *</h3>
                 <input type="date" />
@@ -65,6 +65,7 @@ export default function AddBlog() {
 }
 
 const Container = styled.div`
+  font-family: FiraGO;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -89,7 +90,7 @@ const BlogForm = styled.form`
   }
   .addPhoto {
     display: flex;
-    width: 100%;
+    width: 600px;
     height: 180px;
     border-radius: 12px;
     border: 1px dashed #85858d;
@@ -101,9 +102,35 @@ const BlogForm = styled.form`
       margin-bottom: 24px;
     }
     input {
-      opacity: 0.2;
+      opacity: 0;
       position: relative;
       z-index: 1;
+      top: 83px;
+      left: 113px;
+    }
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    span {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    .author-title {
+      display: flex;
+      justify-content: space-between;
     }
   }
 `;
