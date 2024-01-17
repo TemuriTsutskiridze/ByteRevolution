@@ -21,6 +21,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #f3f2fa;
 `;
 
 const Title = styled.div`

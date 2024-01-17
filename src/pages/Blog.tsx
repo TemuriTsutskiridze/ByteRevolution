@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import blogData from "../blogData.json";
 import styled from "styled-components";
+import Carousel from "../components/blog/Carousel";
 
 export default function Blog() {
   const { blog } = useParams();
@@ -33,6 +34,7 @@ export default function Blog() {
         <Description1>{currentBlog?.description}</Description1>
         <Description2>{currentBlog?.description.slice(0, 526)}</Description2>
       </BlogUnit>
+      <Carousel />
     </BlogPage>
   );
 }
