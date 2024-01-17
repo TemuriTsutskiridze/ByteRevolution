@@ -22,7 +22,7 @@ export default function AddBlog() {
               <div className="author">
                 <h3>ავტორი *</h3>
                 <input type="text" placeholder="შეიყვანეთ ავტორი" />
-                <ul>
+                <ul className="first-list">
                   <li>მინიმუმ 4 სიმბოლო </li>
                   <li>მინიმუმ ორი სიტყვა</li>
                   <li>მხოლოდ ქართული სიმბოლოები</li>
@@ -38,7 +38,11 @@ export default function AddBlog() {
             </section>
             <section className="describe">
               <h3>აღწერა *</h3>
-              <input type="text" placeholder="შეიყვანეთ აღწერა" />
+              <input
+                className="description"
+                type="text"
+                placeholder="შეიყვანეთ აღწერა"
+              />
               <ul>
                 <li>მინიმუმ 2 სიმბოლო </li>
               </ul>
@@ -46,7 +50,7 @@ export default function AddBlog() {
             <section className="date-category-mail">
               <div className="date">
                 <h3>გამოქვეყნების თარიღი *</h3>
-                <input type="date" />
+                <input className="date-input" type="date" />
               </div>
               <div className="category">
                 <h3>კატეგორია *</h3>
@@ -56,6 +60,11 @@ export default function AddBlog() {
                 <h3>ელ-ფოსტა *</h3>
                 <input type="text" placeholder="Example@redberry.ge" />
               </div>
+            </section>
+            <section>
+              <button type="submit" className="publish">
+                გამოქვეყნება
+              </button>
             </section>
           </div>
         </div>
@@ -107,6 +116,7 @@ const BlogForm = styled.form`
       z-index: 1;
       top: 83px;
       left: 113px;
+      cursor: pointer;
     }
     p {
       font-size: 14px;
@@ -123,14 +133,100 @@ const BlogForm = styled.form`
       cursor: pointer;
     }
   }
+  section {
+    margin-top: 24px;
+  }
   .sections {
     display: flex;
     flex-direction: column;
     width: 600px;
 
-    .author-title {
+    .author-title,
+    .date-category-mail {
       display: flex;
       justify-content: space-between;
+    }
+    .date-category-mail {
+      flex-wrap: wrap;
+      .mail {
+        margin-top: 24px;
+      }
+    }
+
+    input {
+      width: 288px;
+      padding: 12px 0;
+      border-radius: 12px;
+      border: 1px solid #e4e3eb;
+      background: #fcfcfd;
+      margin: 8px 0;
+    }
+    input::placeholder {
+      padding-left: 16px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    input:not(:placeholder-shown) {
+      padding: 10px 16px;
+      color: #1a1a1f;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .description {
+      width: 100%;
+      padding-bottom: 92px;
+    }
+
+    li {
+      list-style: none;
+      color: #85858d;
+      font-family: FiraGO;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    ul.first-list li::before {
+      content: "•";
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+    .publish {
+      width: 288px;
+      padding: 10px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #e4e3eb;
+      margin-top: 16px;
+      float: right;
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    .date-input {
+      position: relative;
+      background: url(./public/assets/calendar.svg);
+      background-repeat: no-repeat;
+      background-position: 5%;
+    }
+    .date-input::-webkit-calendar-picker-indicator {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .date-input::-webkit-datetime-edit-fields-wrapper {
+      padding-left: 25px;
     }
   }
 `;
