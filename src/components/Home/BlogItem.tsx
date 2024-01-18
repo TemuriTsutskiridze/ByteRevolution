@@ -1,14 +1,33 @@
 import styled from "styled-components";
-import blogData from "../../blogData.json";
+/* import blogData from "../../blogData.json"; */
 import { Link } from "react-router-dom";
 
-export default function BlogItem() {
+interface Category {
+  name: string;
+  color: string;
+  bgColor: string;
+}
+
+interface BlogItem {
+  id: number;
+  author: string;
+  publish_date: string;
+  title: string;
+  description: string;
+  image: string;
+  categories: Category[];
+}
+
+interface BlogItemProps {
+  filteredItems: BlogItem[];
+}
+const BlogItem: React.FC<BlogItemProps> = ({ filteredItems }) => {
   return (
     <>
       <BlogContainer>
-        {blogData.map((item) => {
+        {filteredItems.map((item: BlogItem, index) => {
           return (
-            <Blog key={item.id}>
+            <Blog key={index}>
               <img src={item.image} alt="image" />
               <Name>{item.author}</Name>
               <Date>{item.publish_date}</Date>
@@ -38,7 +57,7 @@ export default function BlogItem() {
       </BlogContainer>
     </>
   );
-}
+};
 
 const BlogContainer = styled.div`
   display: grid;
@@ -113,3 +132,5 @@ const ItselfLink = styled.div`
     line-height: 2rem;
   }
 `;
+
+export default BlogItem;

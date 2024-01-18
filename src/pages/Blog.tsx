@@ -1,15 +1,19 @@
 import { useParams } from "react-router";
-import blogData from "../blogData.json";
 import styled from "styled-components";
 import Carousel from "../components/blog/Carousel";
+import { Link } from "react-router-dom";
+import { Items } from "../Items";
 
 export default function Blog() {
   const { blog } = useParams();
   const blogId = blog ? parseInt(blog, 10) : undefined;
-  const currentBlog = blogData.find((item: TBlog) => item.id === blogId);
+  const currentBlog = Items.find((item: TBlog) => item.id === blogId);
 
   return (
     <BlogPage>
+      <Link to={"/"}>
+        <ArrowBack src="/assets/ArrowBack.svg" alt="Logo" />
+      </Link>
       <BlogUnit>
         <Image bgimage={currentBlog?.image}></Image>
         <Name>{currentBlog?.author}</Name>
@@ -46,6 +50,13 @@ const BlogPage = styled.div`
   align-items: center;
   padding: 4rem 7.6rem 47.5rem;
   background: #f3f2fa;
+  position: relative;
+  width: 100%;
+`;
+
+const ArrowBack = styled.img`
+  position: absolute;
+  left: 15.8rem;
 `;
 
 const BlogUnit = styled.div`

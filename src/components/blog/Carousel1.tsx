@@ -1,16 +1,25 @@
 import styled from "styled-components";
+import blogData from "../../blogData.json";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { Items } from "../../Items";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Carousel() {
-  const [start, setStart] = useState(0);
-  const [end, setEnd] = useState(2);
+  const [width, setWidth] = useState(0);
+  const carousel = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (carousel.current) {
+      setWidth(
+        carousel.current.scrollWidth - carousel.current.offsetWidth + 100
+      );
+    }
+  }, []);
 
   return (
     <>
       <CarouselContainer>
-        <SimilarBlogsDiv>
+        {/* <SimilarBlogsDiv>
           <SimilarBlogs>მსგავსი სტატიები</SimilarBlogs>
           <ButtonsDiv>
             <Prev
@@ -25,7 +34,7 @@ export default function Carousel() {
             </Prev>
             <Next
               onClick={() => {
-                if (end < Items.length - 1) {
+                if (end < blogData.length - 1) {
                   setEnd((next) => ++next);
                   setStart((prev) => ++prev);
                 }
@@ -37,11 +46,11 @@ export default function Carousel() {
             <ArrowLeft src="/assets/ArrowL.svg" alt="left" />
             <ArrowRight src="/assets/ArrowR.svg" alt="right" />
           </ButtonsDiv>
-        </SimilarBlogsDiv>
+        </SimilarBlogsDiv> */}
 
-        <BlogContainer>
-          {Items.map((item, index) => {
-            if (start <= index && end >= index) {
+        <CarouselCont ref={carousel}>
+          <BlogContainer drag="x" dragConstraints={{ right: 0, left: -width }}>
+            {blogData.map((item) => {
               return (
                 <Blog key={item.id}>
                   <img src={item.image} alt="image" />
@@ -72,9 +81,9 @@ export default function Carousel() {
                   </Link>
                 </Blog>
               );
-            }
-          })}
-        </BlogContainer>
+            })}
+          </BlogContainer>
+        </CarouselCont>
       </CarouselContainer>
     </>
   );
@@ -86,7 +95,7 @@ const CarouselContainer = styled.div`
   margin-top: 9.8rem;
 `;
 
-const SimilarBlogsDiv = styled.div`
+/* const SimilarBlogsDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,22 +142,28 @@ const ArrowLeft = styled.img`
 const ArrowRight = styled.img`
   position: absolute;
   left: 6.8rem;
+`; */
+
+const CarouselCont = styled(motion.div)`
+  width: 128.8rem;
+  overflow: hidden;
+  cursor: grab;
 `;
 
-const BlogContainer = styled.div`
+const BlogContainer = styled(motion.div)`
   display: flex;
   gap: 3.2rem;
   margin-top: 4rem;
 `;
 
-const Blog = styled.div`
+const Blog = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 40.2rem;
   transition: 500ms opacity ease-in-out;
 `;
 
-const Name = styled.p`
+const Name = styled(motion.div)`
   color: #1a1a1f;
   font-size: 1.6rem;
   font-weight: 500;
@@ -156,7 +171,7 @@ const Name = styled.p`
   margin-top: 2.4rem;
 `;
 
-const Date = styled.p`
+const Date = styled(motion.div)`
   color: #85858d;
   font-size: 1.2rem;
   font-weight: 400;
@@ -164,7 +179,7 @@ const Date = styled.p`
   margin-top: 0.8rem;
 `;
 
-const Title = styled.p`
+const Title = styled(motion.div)`
   color: #1a1a1f;
   font-size: 2rem;
   font-weight: 500;
@@ -172,14 +187,18 @@ const Title = styled.p`
   margin-top: 1.6rem;
 `;
 
-const Categories = styled.ul`
+const Categories = styled(motion.div)`
   display: flex;
   gap: 1.6rem;
   list-style-type: none;
   margin-top: 1.6rem;
 `;
 
-const ListItem = styled.li<{ name: string; color: string; bgcolor: string }>`
+const ListItem = styled(motion.div)<{
+  name: string;
+  color: string;
+  bgcolor: string;
+}>`
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;
@@ -189,7 +208,7 @@ const ListItem = styled.li<{ name: string; color: string; bgcolor: string }>`
   color: ${(props) => props.color};
 `;
 
-const Description = styled.p`
+const Description = styled(motion.div)`
   color: #404049;
   font-size: 1.6rem;
   font-weight: 400;
@@ -197,7 +216,7 @@ const Description = styled.p`
   margin-top: 1.6rem;
 `;
 
-const ItselfLink = styled.div`
+const ItselfLink = styled(motion.div)`
   display: flex;
   gap: 0.5rem;
   margin-top: 1.6rem;

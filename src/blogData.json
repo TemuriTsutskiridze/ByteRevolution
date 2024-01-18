@@ -11,18 +11,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ლილე კვარაცხელია"
@@ -35,22 +23,10 @@
     "publish_date": "02.11.2023",
     "categories": [
       {
-        "id": 1,
-        "name": "მარკეტი",
-        "color": "#D6961C",
-        "bgColor": "#FFB82F14"
-      },
-      {
         "id": 2,
         "name": "აპლიკაცია",
         "color": "#15C972",
         "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ტატო სამხარაძე"
@@ -62,18 +38,6 @@
     "image": "/assets/3.png",
     "publish_date": "02.11.2023",
     "categories": [
-      {
-        "id": 1,
-        "name": "მარკეტი",
-        "color": "#D6961C",
-        "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
       {
         "id": 3,
         "name": "ხელოვნური ინტელექტი",
@@ -92,21 +56,9 @@
     "categories": [
       {
         "id": 1,
-        "name": "მარკეტი",
+        "name": "UI/UX",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -120,21 +72,9 @@
     "categories": [
       {
         "id": 1,
-        "name": "მარკეტი",
+        "name": "კვლევა",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -148,21 +88,9 @@
     "categories": [
       {
         "id": 1,
-        "name": "მარკეტი",
+        "name": "Figma",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -179,18 +107,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -207,18 +123,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -235,18 +139,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -263,18 +155,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
@@ -291,18 +171,6 @@
         "name": "მარკეტი",
         "color": "#D6961C",
         "bgColor": "#FFB82F14"
-      },
-      {
-        "id": 2,
-        "name": "აპლიკაცია",
-        "color": "#15C972",
-        "bgColor": "#1CD67D14"
-      },
-      {
-        "id": 3,
-        "name": "ხელოვნური ინტელექტი",
-        "color": "#B71FDD",
-        "bgColor": "#EEE1F7"
       }
     ],
     "author": "ნია გოგსაძე"
